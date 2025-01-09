@@ -1,0 +1,24 @@
+
+function calculateRepRange() {
+    const oneRepMax = document.getElementById("oneRepMax").value;
+
+    if (oneRepMax === "") {
+        alert("Please enter your 1RM.");
+        return;
+    }
+
+    // Strength Formula: 1-5 reps (85-100% of 1RM)
+    const strength = (oneRepMax * 0.85).toFixed(2);
+
+    // Hypertrophy Formula: 6-12 reps (70-85% of 1RM)
+    const hypertrophy = (oneRepMax * 0.75).toFixed(2);
+
+    // Endurance Formula: 13+ reps (less than 70% of 1RM)
+    const endurance = (oneRepMax * 0.65).toFixed(2);
+
+    // Display results
+    document.getElementById("strength").innerText = `${strength} kg`;
+    document.getElementById("hypertrophy").innerText = `${hypertrophy} kg`;
+    document.getElementById("endurance").innerText = `${endurance} kg`;
+}
+

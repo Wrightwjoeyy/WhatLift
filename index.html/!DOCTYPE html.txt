@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Rep Range Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gym Rep Range Calculator</h1>
+        <p>Enter your 1RM (One Rep Max) to calculate your rep range for different goals.</p>
+        
+        <label for="oneRepMax">Enter Your 1RM:</label>
+        <input type="number" id="oneRepMax" placeholder="Enter weight lifted" required>
+
+        <button onclick="calculateRepRange()">Calculate</button>
+        
+        <div id="results">
+            <p><strong>Strength (1-5 reps):</strong> <span id="strength"></span></p>
+            <p><strong>Hypertrophy (6-12 reps):</strong> <span id="hypertrophy"></span></p>
+            <p><strong>Endurance (13+ reps):</strong> <span id="endurance"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
